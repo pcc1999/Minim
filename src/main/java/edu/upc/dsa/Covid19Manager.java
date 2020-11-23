@@ -1,6 +1,7 @@
 package edu.upc.dsa;
 
 import edu.upc.dsa.models.Laboratorio;
+import edu.upc.dsa.models.Muestra;
 import edu.upc.dsa.models.Persona;
 
 public interface Covid19Manager {

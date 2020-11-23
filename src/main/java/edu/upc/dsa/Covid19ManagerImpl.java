@@ -19,6 +19,7 @@ public class Covid19ManagerImpl implements Covid19Manager{
     private Covid19ManagerImpl(){
         this.personas = new HashMap<Integer, Persona>();
         numLabs = 0;
+        numMuestras = 0;
         this.labs = new Laboratorio[maxLabs];
     }
 
@@ -69,11 +70,11 @@ public class Covid19ManagerImpl implements Covid19Manager{
         logger.info(labs);
         logger.debug("Extrayendo muestra");
         Muestra muestra = new Muestra(numMuestras, idClinico, idPers, fechaExtraccion, idLab);
+        numMuestras++;
         logger.debug("Muestra extraida");
         Laboratorio labProcesar = getLaboratorioById(idLab);
         labProcesar.anadirMuestra(muestra);
         logger.debug("Muestra enviada");
-        numMuestras++;
         logger.info(labs);
     }
 

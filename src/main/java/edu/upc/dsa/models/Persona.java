@@ -11,6 +11,10 @@ public class Persona {
     String nivelSalud;
     List<Muestra> listaMuestras;
 
+    public Persona(){
+
+    }
+
     public Persona(int idPersona, String nombre, String apellidos, int edad, String nivelSalud) {
         this.idPersona = idPersona;
         this.nombre = nombre;
